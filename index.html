@@ -5,10 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color:rgba(192, 185, 191, 0.877);
+            display: flex;
+            justify-content: center;
+        }
+        #game-table{
+            padding: 50px;
+            background-color: rgba(81, 78, 80, 0.249);
+            display: flex;
+            flex-wrap: wrap;
+            width: 500px;
+            height: 500px;
+            /* max-width: 700px; */
+            /* min-height: 300px; */
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            border: 3px rgb(65, 66, 65) solid;
+            
+        }
+        .card{
+            display: flex;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(149, 88, 124);
+            margin: 5px;
+            border: 2px solid;
+            justify-content: center;
+            /* text-align: center; */
+            padding: 50px;
+            align-items: center;
+            /* vertical-align:; */
+        }
+        .card:hover{
+            cursor: pointer;
+            background-color: rgb(98, 101, 100);
+        }
+        
+    </style>
 </head>
 <body>
-    <div id="game-table">
-
+    <div id="game-table">        
     </div>
     <script src="game_logic.js"></script>
 </body>
