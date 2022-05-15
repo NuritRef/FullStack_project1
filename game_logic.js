@@ -205,7 +205,7 @@ function startGameScreen(){
         const validInputs = Array.from(inputFields).filter( input => input.value == "");
         // check if there is an empty input
         if (validInputs.length > 0){
-            alert("Fill all the fields!")
+            alert("There are empty fields!")
         }
         else{
             startScreen.style.display = 'none'
