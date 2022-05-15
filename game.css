@@ -113,6 +113,7 @@ br{
     width: 130px;
     height: 60px;
     color: rgba(192, 185, 191, 0.877);
+    border: 8px rgba(192, 185, 191, 0.877) ridge; 
     font-size: 25px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -125,7 +126,7 @@ br{
 }
 .curPlayer{
     background-color: rgb(182, 111, 111);
-    border: 8px rgba(192, 185, 191, 0.877) ridge; 
+    
 }
 .frontCard{
     pointer-events: none;
