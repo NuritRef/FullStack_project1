@@ -1,7 +1,7 @@
 let cards= ["🦁","🦓","🦜","🐒","🐸","🐟","🐮","🐶","🐘","🐪","🦒","🦔","🐨","🐓"]
 
 
-let cardNum;
+let cardNum = 6
 let playersNum;
 let playersNames = []
 let players=[]
@@ -90,26 +90,29 @@ let flipBack = ()=>{
 }
 
 
-let flipCard = (event)=>{
+let flipCard = (event)=>{ 
     shown++
     if (shown<=2){
         event.target.classList.add("isFlipped")
     }
-    if (shown == 2){
-        let shownCards = document.querySelectorAll('.isFlipped:not(.matched)')
-        setTimeout(function(){
-            flipBack()
-        if (shownCards[0].innerText == shownCards[1].innerText){
-            shownCards[0].classList.add("matched")
-            shownCards[1].classList.add("matched")
-            curPlayer.score ++
-            totalShown ++
-            screenScore = document.getElementById(curPlayer.playerNum)
-            screenScore.innerText= `${curPlayer.name}: ${curPlayer.score}`
-            endOfGame()
-        }
-        else{changePlayer()}
-        },1000)        
+    if (shown == 2 ){
+        if (event.target.id != ""){
+            let shownCards = document.querySelectorAll('.isFlipped:not(.matched)')
+            setTimeout(function(){
+                flipBack()
+            if (shownCards[0].innerText == shownCards[1].innerText){
+                shownCards[0].classList.add("matched")
+                shownCards[1].classList.add("matched")
+                curPlayer.score ++
+                totalShown ++
+                screenScore = document.getElementById(curPlayer.playerNum)
+                screenScore.innerText= `${curPlayer.name}: ${curPlayer.score}`
+                endOfGame()
+            }
+            else{changePlayer()}
+            },1000)  
+        } 
+        else{shown--}     
     }
 }
 
@@ -131,6 +134,7 @@ function addCards(shuffledArr){
     for (item of shuffledArr){
         let elem = document.createElement("div")
         elem.className="card"
+        elem.id = `${shuffledArr.indexOf(item)}`
         board.appendChild(elem)
         front = document.createElement("div")
         back = document.createElement("div")
@@ -213,6 +217,5 @@ function startGameScreen(){
         }
     }        
 }
-
 
 startGameScreen()
