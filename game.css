@@ -1,0 +1,162 @@
+body{
+    background-color:rgba(192, 185, 191, 0.877);
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    align-items: center;
+    background-image: url('background1.webp');
+    background-size: 2000px;
+    flex-direction: column;
+    font-size: 100%;
+}
+h1{
+    position: absolute;
+    transform: translate(0,-50%);
+    top: 5%;
+    padding: 10px;
+    color: rgba(192, 185, 191, 0.877);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+br{
+    margin: 20px;
+}
+#startScreen{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(14, 25, 31);
+    border: 8px rgba(192, 185, 191, 0.877) ridge; 
+    padding: 70px;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgba(192, 185, 191, 0.877);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#startGameBtn{
+    padding-top: 3px;
+    padding-right: 8px;
+    padding-bottom: 3px;
+    padding-left: 8px;
+    border: 2px rgba(192, 185, 191, 0.877) ridge;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+#semi-body{
+    display: none;
+    flex-direction: row;
+    padding: 30px
+}
+#game-table{
+    padding: 50px;
+    background-color: rgba(81, 78, 80, 0.249);
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 8px rgba(192, 185, 191, 0.877) ridge;          
+}
+#players{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+#btnDiv{
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 130px;
+    height: 60px;
+}
+#restartGameBtn{
+    display: flex;
+    color: rgba(192, 185, 191, 0.877);
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 30px;
+    border: 8px rgba(192, 185, 191, 0.877) ridge; 
+    /* text-transform: uppercase; */
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#winScreen{
+    display: none;
+    background-color: rgb(162, 161, 160);
+    border: 8px rgba(192, 185, 191, 0.877) ridge; 
+    padding: 100px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgba(42, 41, 41, 0.249);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card{
+    display: flex;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(167, 163, 165);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.5rem;
+}
+.players{
+    display: flex;
+    width: 130px;
+    height: 60px;
+    color: rgba(192, 185, 191, 0.877);
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 30px;
+    text-transform: uppercase;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.curPlayer{
+    background-color: rgb(182, 111, 111);
+    border: 8px rgba(192, 185, 191, 0.877) ridge; 
+}
+.frontCard{
+    pointer-events: none;
+    text-align: center;
+}
+.backCard, .frontCard{
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform .6s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+    font-size:2.5em;
+    justify-content: center;
+    align-items: center;
+}
+.backCard{
+    transform: rotateY(180deg) rotateZ(50deg);
+    user-select: none;
+    text-align: center;
+}
+.card.isFlipped .frontCard {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.card.isFlipped .backCard {
+    transform: rotateY(0) rotateZ(0);
+}
+.card:hover{
+    cursor: pointer;
+    background-color: rgb(98, 101, 100);
+    box-shadow: inset 0px 0px 0px 1px black;
+}
+.card.matched{
+    visibility: hidden;
+}
+
