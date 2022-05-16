@@ -69,7 +69,6 @@ br{
 }
 #restartGameBtn{
     display: flex;
-    position: sticky;
     color: rgba(192, 185, 191, 0.877);
     font-size: 15px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
