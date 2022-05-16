@@ -1,7 +1,7 @@
-let cards= ["🦁","🦓","🦜","🐒","🐸","🐟","🐮","🐶","🐘","🐪","🦒","🦔","🐨","🐓"]
+let cards= ["🦁","🦓","🦜","🐒","🐸","🐟","🐮","🐶","🐘","🐪","🦒","🦔","🐨","🐓","🦌","🐖","🐇","🦨"]
 
 
-let cardNum = 6
+let cardNum = 9
 let playersNum;
 let playersNames = []
 let players=[]
@@ -146,6 +146,7 @@ function addCards(shuffledArr){
         elem.appendChild(front)        
         elem.appendChild(back)        
         elem.onclick=flipCard
+        // if (shuffledArr.length)
     }
 }
 
